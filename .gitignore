@@ -52,3 +52,5 @@ Mkfile.old
 dkms.conf
 BootLoader\Debug\*
 BootLoader\Release\*
+Application\Debug\*
+Application\Release\*
