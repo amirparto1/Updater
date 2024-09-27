@@ -99,8 +99,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
-	  HAL_Delay(300);
+	  for (int i = 0; i < 10; ++i)
+	  {
+		  HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+		  HAL_Delay(300);
+	  }
 	  goto_application();
     /* USER CODE END WHILE */
 

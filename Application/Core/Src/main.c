@@ -32,11 +32,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define MAJOR 0   //APP Major version Number
+#define MINOR 1   //APP Minor version Number
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+const uint8_t APP_Version[2] = { MAJOR, MINOR };
 
 /* USER CODE END PM */
 
@@ -96,6 +98,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+	 HAL_GPIO_WritePin( LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET );
+	 HAL_Delay(1000);    //1 Sec delay
+	 HAL_GPIO_WritePin( LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET );
+	 HAL_Delay(1000);  //1 Sec delay
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
